@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/styleform.css">
+    <title>Document</title>
+</head>
+<body>
+<aside>
+    <h3>Исходный текст</h3>
+    <textarea class="regexp" id="source"></textarea>
+    <h3>Обработанный текст</h3>
+    <textarea class="regexp-out" readonly id="output"></textarea>
+</aside>
+<script src="./js/hm4.js" defer></script>
+<div class="form">
+    <label id="name">
+        <input type="text" name="name" placeholder="Ваше имя">
+        <small class="error">Ваше имя может содержать только буквы</small>
+    </label>
+    <label id="phone">
+        <input type="tel" name="phone" placeholder="+7(000)000-00-00">
+        <small class="error">Введите свой адрес электронной почты в формате +7 (000) 000-00-00</small>
+    </label>
+    <label id="email">
+        <input type="email" name="email" placeholder="E-mail">
+        <small class="error">Введите свой адрес электронной почты в формате example@site.com</small>
+    </label>
+    <label id="message">
+        <textarea placeholder="Сообщение" name="message"></textarea>
+        <small class="error">Будем рады даже одному письму</small>
+    </label>
+    <button class="button">Отправить</button>
+</div>
+<script src="./js/form.js" async></script>
+</body>
+</html>
