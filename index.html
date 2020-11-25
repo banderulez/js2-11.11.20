@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <title>Интернет-магазин</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body class="container">
     <header class="header-menu">
         <img class="logo" src="./img/adwords.svg" alt="Logo">
-        <button class="btn-cart" type="button">Корзина</button>
+        <div class="cart">
+            <button class="btn-cart" type="button">Корзина</button>
+            <div class="cart-block invisible"></div>
+        </div>
     </header>
     <main class="catalog">
         <div class="products"></div>
         <div class="products-total"></div>
     </main>
+    <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
