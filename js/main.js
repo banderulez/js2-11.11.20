@@ -46,8 +46,8 @@ const app = new Vue({
                     }
                 })
         },
-        filter() {
-            let regexp = new RegExp(this.searchLine, 'i');
+        filter(searchLine) {
+            let regexp = new RegExp(searchLine, 'i');
             this.filtered =  this.filtered.filter(el => regexp.test(el.product_name));
         }
         },
@@ -55,6 +55,7 @@ const app = new Vue({
         this.getJson(`${API + this.cartUrl}`)
             .then(data => {
                 for (let item of data.contents){
+                    this.products.push(item);
                     this.cartItems.push(item);
                 }
             });
@@ -68,6 +69,7 @@ const app = new Vue({
         this.getJson(`getProducts.json`)
             .then(data => {
                 for(let item of data){
+                    this.products.push(item);
                     this.filtered.push(item);
                 }
             })
